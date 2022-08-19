@@ -1,6 +1,12 @@
 class Quadratic:
     '''решение квдратных уравнений'''
 
+    def __init__(self, a, b, c):
+        self.a = a
+        self.b = b
+        self.c = c
+
+
     def discrim(self, a, b, c: float) -> float:
         return (b ** 2) - 4 * a * c
 
@@ -14,14 +20,4 @@ class Quadratic:
         znamenatel = 2 * a
         return chislitel / znamenatel
 
-    def input_data(self):
-        '''получение данных от пользователя'''
-        print("Введите данные: ")
-
-        a = float(input("Введите значение А "))
-        1 / a
-        b = float(input("Введите значение B "))
-        c = float(input("Введите значение C "))
-
-        return a, b, c
 
