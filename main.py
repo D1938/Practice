@@ -23,7 +23,7 @@ def main(a ,b, c):
         print(str(e).split(":")[0])
         return str(e).split(":")[0]
 
-    D = raschet.discrim(a, b, c)
+    raschet.discrim()
     if D < 0:
         return "negative discriminant"
 
