@@ -19,6 +19,7 @@ class Quadratic:
 
     def discrim(self) -> float:
         self.D = (self.b ** 2) - 4 * self.a * self.c
+
         return self.D
 
     def quadratic(self, a, b, D, znak = None):

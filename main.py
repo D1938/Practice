@@ -25,15 +25,17 @@ def main(a ,b, c):
 
     D=raschet.discrim()
     if D < 0:
+        raschet.error = "negative discriminant"
         return "negative discriminant"
 
     elif D == 0:
-        x1 = x2 = raschet.discrim(a, b, D)
+        raschet.x1 = raschet.x2 = x1 = x2 = raschet.quadratic(a, b, D)
 
     elif D > 0:
         x1 = raschet.quadratic(a, b, D)
         x2 = raschet.quadratic(a, b, D, znak="")
-
+        raschet.x1 = x1
+        raschet.x2 = x2
 
     return (x1, x2)
 
@@ -54,6 +56,7 @@ if __name__ == "__main__":
                         sys.exit()
 
                 except ZeroDivisionError:
+
                     print("Ошибка : А=0")
                 except ValueError:
                     print("Ошибка : Введено не число")
