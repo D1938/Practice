@@ -1,12 +1,21 @@
+from math import sqrt
 class Quadratic:
     '''решение квдратных уравнений'''
+    solution_list = []
 
-    def __init__(self, a, b, c):
+    def __init__(self, a=None, b=None, c=None):
         self.a = a
         self.b = b
         self.c = c
         self.D = None
-#self.x1, self.x2, self.error
+        self.x1 = None
+        self.x2 = None
+        self.error = None
+        Quadratic.solution_list.append(self)
+    @classmethod
+    def list_prn(cls):
+        for i  in Quadratic.solution_list:
+            print(vars(i))
 
     def discrim(self) -> float:
         self.D = (self.b ** 2) - 4 * self.a * self.c
@@ -27,4 +36,4 @@ if __name__ == "__main__":
     print(u1.D)
     u1.discrim()
     print(u1.D)
-    print("-"*100)
+    Quadratic.list_prn()

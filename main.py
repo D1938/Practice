@@ -23,7 +23,7 @@ def main(a ,b, c):
         print(str(e).split(":")[0])
         return str(e).split(":")[0]
 
-    raschet.discrim()
+    D=raschet.discrim()
     if D < 0:
         return "negative discriminant"
 
@@ -50,6 +50,7 @@ if __name__ == "__main__":
                     key = input("Расчитать еще одно уравнение? y/n ")
                     if key == "n":
                         print("Программа завершила свою работу")
+                        Quadratic.list_prn()
                         sys.exit()
 
                 except ZeroDivisionError:
