@@ -1,5 +1,5 @@
 import sys
-from Quadratic import Quadratic
+from quadratic import Quadratic
 
 
 def input_data():
@@ -13,7 +13,8 @@ def input_data():
 
     return a, b, c
 
-def main(a ,b, c):
+
+def main(a, b, c):
     '''Ф-ция'''
     try:
 
