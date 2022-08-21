@@ -43,6 +43,7 @@ class Quadratic:
             self.error = "negative discriminant"
         else:
             self.error = None
+        return self.D
 
     def quadratic(self, znak = None):
         '''Если передан знак, то знак = "+", иначе "-" '''

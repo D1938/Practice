@@ -26,15 +26,15 @@ def main(a, b, c):
 
     D=raschet.discrim()
     if D < 0:
-        raschet.error = "negative discriminant"
+        #raschet.error = "negative discriminant"
         return "negative discriminant"
 
     elif D == 0:
         raschet.x1 = raschet.x2 = x1 = x2 = raschet.quadratic(a, b, D)
 
     elif D > 0:
-        x1 = raschet.quadratic(a, b, D)
-        x2 = raschet.quadratic(a, b, D, znak="")
+        x1 = raschet.quadratic()
+        x2 = raschet.quadratic(znak="")
         raschet.x1 = x1
         raschet.x2 = x2
 
@@ -53,7 +53,8 @@ if __name__ == "__main__":
                     key = input("Расчитать еще одно уравнение? y/n ")
                     if key == "n":
                         print("Программа завершила свою работу")
-                        Quadratic.list_prn()
+
+
                         sys.exit()
 
                 except ZeroDivisionError:
